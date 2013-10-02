@@ -5,4 +5,5 @@ nikola/*
 test/*
 tor*
 tree
-
+addGitRepo
+createsite.sh
