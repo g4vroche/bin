@@ -1,5 +1,20 @@
 #!/bin/bash
 
+####################################################################
+# Create a patch for a given ticket number.
+# 
+# Assuming each ticket has its own commit and that commit
+# message contains the ticket number in the format #<NUMBER>
+# This will grep on git log for the ticket number to find the 
+# commit hash, then trigger a git show redirecting output in a file
+# named <TICKET NUMBER>-<COMMIT HASH>.patch
+#
+# Usage :
+# (Where 1337 is the ticket number)
+# $ cd /my/git/repo
+# $ tp /my/patch/storage/dir 1337
+####################################################################
+
 STORAGE=$1 
 TICKET=$2
 
